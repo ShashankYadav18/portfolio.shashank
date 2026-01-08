@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Yadav - Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Layers -->
+    <div class="bg-layer-1"></div>
+    <div class="bg-layer-2"></div>
+    <div class="bg-pattern"></div>
+
+    <!-- Side Decorations -->
+    <div class="side-decorations left">
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+    </div>
+    <div class="side-decorations right">
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+        <div class="decoration-element"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Shashank.DEV</a>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#feedback">Message</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Shashank Yadav</span></h1>
+                    <p>An enthusiastic <span id="element" class="typed-text"></span> ready to create amazing digital experiences with clean code and innovative solutions.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                        <a href="https://github.com/ShashankYadav18" class="btn secondary">
+                            <i class="fab fa-github"></i>
+                            View GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-animation">
+                        <div class="code-line">
+                            <span class="code-keyword">const</span> 
+                            <span class="code-variable">developer</span> 
+                            <span class="code-operator">=</span> 
+                            <span class="code-string">"Shashank"</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-keyword">function</span> 
+                            <span class="code-function">buildAmazingApps</span>() {
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="code-keyword">return</span> 
+                            <span class="code-string">"Innovation"</span>
+                        </div>
+                        <div class="code-line">}</div>
+                    </div>
+                    
+                    <!-- Technology Icons -->
+                    <div class="tech-icons">
+                        <div class="tech-icon tech-react">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon tech-js">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-icon tech-python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-icon tech-node">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon tech-git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="tech-icon tech-html">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-icon tech-css">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-icon tech-github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                        <div class="shape shape-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <div class="subtitle">Get to know me</div>
+                <h2>About Me</h2>
+                <p>I'm a passionate Computer Science graduate with a strong foundation in software development. As a fresher, I'm eager to apply my academic knowledge and personal projects to real-world challenges. I love learning new technologies and building innovative solutions.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-header">
+                <div class="subtitle">What I've built</div>
+                <h2>My Projects</h2>
+                <p>Here are some projects I've worked on during my learning journey. Each project represents a step in my growth as a developer.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=400&h=250&fit=crop" alt="Weather Forecast">
+                        <div class="project-overlay">
+                            <a href="https://shashankyadav18.github.io/weather-forecast-website/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Forecast</h3>
+                        <p>City-by-city forecasts with live API data, hourly trends, and a clean dashboard for quick checks on the go.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=400&h=250&fit=crop" alt="Gaming Website">
+                        <div class="project-overlay">
+                            <a href="https://shashankyadav18.github.io/GameHub/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gaming Website</h3>
+                        <p>A landing and community hub for gamers with featured titles, leaderboards, and responsive UI tuned for fast loads.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.squarespace-cdn.com/content/v1/68f934d7f5cfc169c855f66c/98aefc64-67c1-4c80-8467-1a75a354ea8c/ResumeMaker+Logo+Small.png" alt="Smart Resume Maker">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Resume Maker</h3>
+                        <p>Template-driven resume builder with guided inputs, live preview, and export-ready PDFs tailored for tech roles.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vite.js</span>
+                            <span class="tag">PDF Export</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://ddi-dev.com/uploads/task-management-software.png" alt="Task Management">
+                        <div class="project-overlay">
+                            <a href="https://shashankyadav18.github.io/Todo-website/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management</h3>
+                        <p>Kanban-style task board with drag-and-drop, due date reminders, and team-friendly sharing for small squads.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=400&h=250&fit=crop" alt="E-Learning Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Learning Platform</h3>
+                        <p>Modular learning portal with course playlists, progress tracking, quizzes, and a clean dashboard for learners.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-connector"></div>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-header">
+                <div class="subtitle">What I work with</div>
+                <h2>Skills & Technologies</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Sass</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-connector"></div>
+
+        <!-- Feedback Section -->
+        <section id="feedback">
+            <div class="section-header">
+                <div class="subtitle">Get in touch</div>
+                <h2>Send Me a Message</h2>
+                <p>Have a project in mind or want to collaborate? I'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>shashank.yadav@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 (xxx) xxx-xxxx</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form class="feedback-form" action="https://formspree.io/f/mqagwlak" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shashank Yadav</h3>
+                <p>Aspiring Software Developer passionate about learning new technologies and creating innovative solutions.</p>
+                <div class="social-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Consulting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> shashank.yadav@example.com</li>
+                    <li><i class="fas fa-phone"></i> +91 (xxx) xxx-xxxx</li>
+                    <li><i class="fas fa-map-marker-alt"></i> India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shashank Yadav. All rights reserved. Built with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-dot active" data-section="home"></div>
+        <div class="scroll-dot" data-section="projects"></div>
+        <div class="scroll-dot" data-section="skills"></div>
+        <div class="scroll-dot" data-section="feedback"></div>
+        <div class="scroll-dot" data-section="contact"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
