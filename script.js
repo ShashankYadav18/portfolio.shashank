@@ -22,12 +22,24 @@ themeToggle.addEventListener('click', () => {
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
-    html.setAttribute('data-theme', newTheme === 'light' ? 'light' : '');
-    if (newTheme === 'dark') {
+    if (newTheme === 'light') {
+        html.setAttribute('data-theme', 'light');
+    } else {
         html.removeAttribute('data-theme');
     }
     
     localStorage.setItem('theme', newTheme);
+    
+    // Update nav background for new theme
+    const navElement = document.querySelector('nav');
+    if (navElement) {
+        const scrolled = window.scrollY > 50;
+        if (newTheme === 'light') {
+            navElement.style.background = scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.9)';
+        } else {
+            navElement.style.background = scrolled ? 'rgba(10, 10, 10, 0.98)' : 'rgba(10, 10, 10, 0.8)';
+        }
+    }
 });
 
 // Smooth scrolling for navigation links
@@ -62,16 +74,21 @@ const navLinks = document.querySelectorAll('nav a[href^="#"]');
 const scrollDots = document.querySelectorAll('.scroll-dot');
 const nav = document.querySelector('nav');
 
+// Helper function to get nav background based on theme
+function getNavBackground(scrolled) {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+        return scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.9)';
+    }
+    return scrolled ? 'rgba(10, 10, 10, 0.98)' : 'rgba(10, 10, 10, 0.8)';
+}
+
 // Combined scroll handler with throttling
 const handleScroll = throttle(() => {
     const scrollY = window.scrollY;
     
-    // Update nav background
-    if (scrollY > 50) {
-        nav.style.background = 'rgba(10, 10, 10, 0.98)';
-    } else {
-        nav.style.background = 'rgba(10, 10, 10, 0.95)';
-    }
+    // Update nav background based on theme
+    nav.style.background = getNavBackground(scrollY > 50);
     
     // Find current section
     let current = '';
