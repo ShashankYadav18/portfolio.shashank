@@ -8,6 +8,28 @@ var typed = new Typed('#element', {
     cursorChar: '|'
 });
 
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to dark
+const savedTheme = localStorage.getItem('theme') || 'dark';
+if (savedTheme === 'light') {
+    html.setAttribute('data-theme', 'light');
+}
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme === 'light' ? 'light' : '');
+    if (newTheme === 'dark') {
+        html.removeAttribute('data-theme');
+    }
+    
+    localStorage.setItem('theme', newTheme);
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -22,16 +44,39 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Update active navigation link on scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    const scrollDots = document.querySelectorAll('.scroll-dot');
+// Throttle function for scroll performance
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// Cache DOM elements outside scroll handler for performance
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+const scrollDots = document.querySelectorAll('.scroll-dot');
+const nav = document.querySelector('nav');
+
+// Combined scroll handler with throttling
+const handleScroll = throttle(() => {
+    const scrollY = window.scrollY;
     
+    // Update nav background
+    if (scrollY > 50) {
+        nav.style.background = 'rgba(10, 10, 10, 0.98)';
+    } else {
+        nav.style.background = 'rgba(10, 10, 10, 0.95)';
+    }
+    
+    // Find current section
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
@@ -52,7 +97,9 @@ window.addEventListener('scroll', () => {
             dot.classList.add('active');
         }
     });
-});
+}, 16); // ~60fps
+
+window.addEventListener('scroll', handleScroll, { passive: true });
 
 // Scroll indicator click handlers
 document.querySelectorAll('.scroll-dot').forEach(dot => {
@@ -68,15 +115,7 @@ document.querySelectorAll('.scroll-dot').forEach(dot => {
     });
 });
 
-// Add scroll effect to navigation
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(10, 10, 10, 0.98)';
-    } else {
-        nav.style.background = 'rgba(10, 10, 10, 0.95)';
-    }
-});
+// Scroll effect for navigation is now handled in the combined scroll handler above
 
 // Contact form functionality for Formspree
 document.addEventListener('DOMContentLoaded', function() {
